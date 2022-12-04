@@ -1,0 +1,79 @@
+:root {
+  --color-dark: #161616;
+  --color-white: #ffffff;
+  --color-gray: #525050;
+  --color-blue: #0f62cf;
+  --color-red: #d42a00;
+}
+
+*,
+*¨::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+  text-rendering: optimizelegibility;
+}
+
+html {
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-dark);
+  box-sizing: inherit;
+  color: var(--color-white);
+  margin: inherit;
+  padding: inherit;
+}
+
+a {
+  background: transparent;
+  color: inherit;
+  display: inline-flex;
+  text-decoration: none;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.site-wrap {
+  max-width: 700px;
+  margin: 100px auto;
+  background: var(--color-blue);
+  padding: 40px;
+  text-align: center;
+}
+
+.align-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.align-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.slide-in {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.align-left.slide-in {
+  transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
+  transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
+}
